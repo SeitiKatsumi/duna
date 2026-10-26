@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin
+Disallow: /api/
+Sitemap: https://duna-hipro-brasilia.seitikatsumi.chatgpt.site/sitemap.xml
+
