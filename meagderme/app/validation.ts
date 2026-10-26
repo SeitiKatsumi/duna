@@ -1,0 +1,6 @@
+import {z} from 'zod';
+const short=z.string().trim().min(2).max(120);
+export const leadSchema=z.object({requestId:z.string().uuid(),name:short,clinic:short,specialty:short,phone:z.string().transform(v=>v.replace(/\D/g,'')).pipe(z.string().regex(/^\d{10,15}$/)),location:short,period:short,plan:z.string().trim().min(2).max(100),website:z.string().max(0).optional(),consent:z.literal(true),source:z.record(z.string().max(200)).refine(v=>Object.keys(v).every(k=>['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].includes(k))),referrer:z.string().max(300)});
+const url=z.string().max(500).refine(s=>s===''||/^https:\/\/[^\s]+$/.test(s));
+const image=z.string().max(500).refine(s=>/^\/images\/[a-zA-Z0-9._/-]+$/.test(s)||/^https:\/\/[^\s]+$/.test(s));
+export const contentSchema=z.object({heroTitle:short,heroText:z.string().min(10).max(500),whatsapp:z.string().regex(/^(|\d{10,15})$/),darkImage:image,lightImage:image,campaignTitle:z.string().max(160),campaignText:z.string().max(1000),videoUrl:url,plans:z.array(z.object({name:short,description:z.string().min(5).max(300),price:z.string().max(60),period:z.string().max(160),items:z.array(z.string().min(2).max(180)).min(1).max(10)})).length(3),faqs:z.array(z.object({question:z.string().min(5).max(180),answer:z.string().min(5).max(1000)})).min(1).max(20)});
