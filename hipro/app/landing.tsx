@@ -33,7 +33,7 @@ const money = (v: number) =>
   v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 function track(name: string) {
   if (localStorage.getItem("duna-cookies") === "accepted")
-    void fetch("/api/events", {
+    void fetch("/hipro/api/events", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name }),
@@ -205,7 +205,7 @@ export default function Landing({
         )
           utm[k] = v.slice(0, 250);
     try {
-      const response = await fetch("/api/leads", {
+      const response = await fetch("/hipro/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -261,7 +261,7 @@ export default function Landing({
         <a href="/" aria-label="Duna Equipamentos, início">
           <img
             className="logo"
-            src="/images/duna-logo.webp"
+            src="/hipro/images/duna-logo.webp"
             alt="Duna Equipamentos"
             width="108"
             height="78"
@@ -1050,7 +1050,7 @@ export default function Landing({
                   required
                 />
                 <label htmlFor="consent">
-                  Li a <a href="/privacidade">Política de Privacidade</a> e
+                  Li a <a href="/hipro/privacidade">Política de Privacidade</a> e
                   autorizo o contato sobre esta solicitação.
                 </label>
               </div>
@@ -1085,7 +1085,7 @@ export default function Landing({
         <a href="/" aria-label="Início">
           <img
             className="logo"
-            src="/images/duna-logo.webp"
+            src="/hipro/images/duna-logo.webp"
             alt="Duna Equipamentos"
             width="108"
             height="78"
@@ -1099,8 +1099,8 @@ export default function Landing({
           </small>
         </div>
         <nav aria-label="Informações legais">
-          <a href="/privacidade">Privacidade</a>
-          <a href="/termos">Termos de uso</a>
+          <a href="/hipro/privacidade">Privacidade</a>
+          <a href="/hipro/termos">Termos de uso</a>
           <button onClick={() => setCookies("pending")}>Cookies</button>
           <a href="#contato">Contato</a>
         </nav>
@@ -1115,7 +1115,7 @@ export default function Landing({
             <p>
               Usamos armazenamento essencial. Você escolhe se permite medir
               visitas aos planos e ações de interesse.{" "}
-              <a href="/privacidade#cookies">Saiba mais</a>.
+              <a href="/hipro/privacidade#cookies">Saiba mais</a>.
             </p>
           </div>
           <div>

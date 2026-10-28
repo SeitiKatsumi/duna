@@ -1,4 +1,4 @@
-import { env } from "cloudflare:workers";
+import { env } from '../../deploy/runtime';
 import { contentSchema, defaultContent } from "@/lib/content";
 export function db() {
   if (!env.DB) throw new Error("Banco de dados indisponível.");

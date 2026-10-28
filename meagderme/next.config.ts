@@ -1,7 +1,4 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  async headers(){return [{source:'/:path*',headers:[{key:'X-Content-Type-Options',value:'nosniff'},{key:'Referrer-Policy',value:'strict-origin-when-cross-origin'},{key:'Permissions-Policy',value:'camera=(), microphone=(), geolocation=()'}]}];},
-};
-
+import type { NextConfig } from 'next';
+import path from 'node:path';
+const nextConfig: NextConfig = { basePath: '/meagderme', output: 'standalone', outputFileTracingRoot: path.resolve(process.cwd(), '..'), experimental: { cpus: 2 }, serverExternalPackages: ['node:sqlite'] };
 export default nextConfig;

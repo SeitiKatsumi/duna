@@ -1,4 +1,4 @@
-import {env} from 'cloudflare:workers';
+import {env} from '../../deploy/runtime';
 import {database} from '../db';
 import {defaultContent,type SiteContent} from './content';
 import {getChatGPTUser} from './chatgpt-auth';
@@ -7,7 +7,7 @@ export async function isAdmin(){const user=await getChatGPTUser();return !!user&
 export async function getContent():Promise<SiteContent>{
  try{const row=await database().prepare('SELECT value FROM settings WHERE key = ?').bind('content').first<{value:string}>();return row?JSON.parse(row.value):defaultContent;}catch{console.error('Content unavailable; using bundled content.');return defaultContent;}
 }
-export function sameOrigin(req:Request){return req.headers.get('origin')===new URL(req.url).origin;}
+export function sameOrigin(req:Request){const protocol=req.headers.get('x-forwarded-proto')?.split(',')[0]||new URL(req.url).protocol.slice(0,-1);return req.headers.get('origin')===`${protocol}://${req.headers.get('host')}`;}
 export async function limited(req:Request,category:string,max:number){
  const now=Date.now(),bucket=Math.floor(now/600000),ip=req.headers.get('cf-connecting-ip')||'local';
  const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(`${category}:${bucket}:${ip}`));

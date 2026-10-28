@@ -2,7 +2,7 @@ export const defaultContent = {
   heroTitle: 'Tecnologia para elevar sua clínica.',
   heroText: 'Precisão em cada camada. Conheça as possibilidades da radiofrequência microagulhada, agora por locação com a Duna em Brasília.',
   whatsapp: '',
-  darkImage: '/images/megaderme-dark.webp', lightImage: '/images/megaderme-light.webp',
+  darkImage: '/meagderme/images/megaderme-dark.webp', lightImage: '/meagderme/images/megaderme-light.webp',
   campaignTitle: '', campaignText: '', videoUrl: '',
   plans: [
     { name: 'Locação pontual', description: 'Uma tecnologia completa para uma agenda específica.', price: 'Sob consulta', period: 'Período a combinar', items: ['Ideal para uma agenda concentrada', 'Aplicadores definidos na proposta', 'Entrega e retirada sob consulta', 'Consumíveis conforme contratação'] },

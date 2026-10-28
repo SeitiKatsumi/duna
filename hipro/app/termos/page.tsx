@@ -50,7 +50,7 @@ export default function Terms() {
       </p>
       <h2>Privacidade e atendimento</h2>
       <p>
-        Consulte a <a href="/privacidade">Política de Privacidade</a> e utilize
+        Consulte a <a href="/hipro/privacidade">Política de Privacidade</a> e utilize
         o <a href="/#contato">atendimento da Duna</a> para esclarecimentos.
         Estes termos não afastam direitos previstos na legislação aplicável.
       </p>

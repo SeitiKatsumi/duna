@@ -1,6 +1,6 @@
 import Landing from "./landing";
 import { readContent } from "@/db";
-import { env } from "cloudflare:workers";
+import { env } from '../../deploy/runtime';
 export const dynamic = "force-dynamic";
 export default async function Home() {
   const content = await readContent();

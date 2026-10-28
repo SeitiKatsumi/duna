@@ -1,4 +1,4 @@
-import { env } from "cloudflare:workers";
+import { env } from '../../deploy/runtime';
 import { getChatGPTUser } from "@/app/chatgpt-auth";
 import { db } from "@/db";
 export async function isAdmin() {
@@ -12,7 +12,8 @@ export async function isAdmin() {
 }
 export function sameOrigin(req: Request) {
   const origin = req.headers.get("origin");
-  return !!origin && origin === new URL(req.url).origin;
+  const protocol = req.headers.get('x-forwarded-proto')?.split(',')[0] || new URL(req.url).protocol.slice(0,-1);
+  return !!origin && origin === `${protocol}://${req.headers.get('host')}`;
 }
 export async function rateLimit(req: Request, kind: string, max: number) {
   const day = new Date().toISOString().slice(0, 10);

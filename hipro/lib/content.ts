@@ -63,8 +63,8 @@ export const defaultContent: Content = {
     "A tecnologia HIPRO combina ultrassom micro e macrofocado com controle digital de profundidade. Uma nova possibilidade para ampliar o portfólio da sua clínica.",
   about:
     "A Duna conecta sua clínica a novas possibilidades. Em Brasília, oferecemos locação de tecnologia estética com atendimento próximo para encontrar o formato que faz sentido para sua agenda.",
-  heroImage: "/images/hipro-light.webp",
-  technologyImage: "/images/hipro-dark.webp",
+  heroImage: "/hipro/images/hipro-light.webp",
+  technologyImage: "/hipro/images/hipro-dark.webp",
   videoUrl: "",
   whatsapp: "",
   legalName: "Duna Equipamentos",

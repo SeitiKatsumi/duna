@@ -25,7 +25,7 @@ export default function Admin({ initial }: { initial: Content }) {
     [leads, setLeads] = useState<Lead[]>([]),
     [events, setEvents] = useState<{ name: string; total: number }[]>([]);
   async function call(data: unknown) {
-    const r = await fetch("/api/admin", {
+    const r = await fetch("/hipro/api/admin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -48,7 +48,7 @@ export default function Admin({ initial }: { initial: Content }) {
   }
   async function load() {
     try {
-      const r = await fetch("/api/admin");
+      const r = await fetch("/hipro/api/admin");
       const b = (await r.json()) as {
         error?: string;
         leads: Lead[];
