@@ -1099,6 +1099,7 @@ export default function Landing({
           </small>
         </div>
         <nav aria-label="Informações legais">
+          <a href="/meagderme">Conheça o Megaderme Duo</a>
           <a href="/hipro/privacidade">Privacidade</a>
           <a href="/hipro/termos">Termos de uso</a>
           <button onClick={() => setCookies("pending")}>Cookies</button>

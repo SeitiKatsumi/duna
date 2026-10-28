@@ -1,1 +1,1 @@
-export default function robots(){return {rules:{userAgent:'*',allow:'/',disallow:['/admin','/api/']},sitemap:'https://duna-megaderme-duo.seitikatsumi.chatgpt.site/sitemap.xml'};}
+export default function robots(){return {rules:{userAgent:'*',allow:'/meagderme',disallow:['/meagderme/admin','/meagderme/api/']},sitemap:'https://dunaequipamentos.com.br/meagderme/sitemap.xml'};}
