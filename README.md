@@ -1,20 +1,20 @@
 # Duna Equipamentos — guia para o Vicente
 
-Este repositório reúne três sites independentes. Comece entrando na pasta do site que vai editar; não existe aplicação, instalação de dependências ou build compartilhado na raiz.
+Este repositório reúne a home e duas landing pages. A publicação no CapRover está documentada em `deploy/README.md`. Comece entrando na pasta do site que vai editar; não existe aplicação, instalação de dependências ou build compartilhado na raiz.
 
 ## Onde está cada projeto
 
 ```text
 duna/                         # raiz do repositório SeitiKatsumi/duna
 ├── README.md                 # este guia
-├── duna/                     # reservado para o futuro site institucional
+├── duna/                     # home provisória estática
 ├── meagderme/                # landing page do Megaderme Duo
 └── hipro/                    # landing page HIPRO, com calculadora
 ```
 
 | Pasta | Situação | Documentação específica |
 | --- | --- | --- |
-| [`duna/`](duna/) | Espaço reservado; aplicação ainda não criada | [`duna/README.md`](duna/README.md) |
+| [`duna/`](duna/) | Home provisória publicada no CapRover | [`duna/README.md`](duna/README.md) |
 | [`meagderme/`](meagderme/) | Projeto existente importado integralmente | [`meagderme/DEPLOY.md`](meagderme/DEPLOY.md) |
 | [`hipro/`](hipro/) | Projeto existente importado integralmente | [`hipro/README.md`](hipro/README.md) |
 
