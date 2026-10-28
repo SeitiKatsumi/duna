@@ -1,15 +1,9 @@
-# Site institucional da Duna
+# Home provisória da Duna
 
-Esta pasta está reservada para o **futuro site institucional da Duna Equipamentos**.
+Página estática em `index.html`, com imagens locais em `assets/`.
 
-Ainda não há aplicação, `package.json`, build, domínio ou deploy configurado aqui. Este arquivo mantém o diretório no Git e registra sua finalidade.
+Publicação: aplicação `duna-home`, CapRover servidor 02 (5.161.102.133), porta 80, usando `Dockerfile.home` e `captain-definition` na raiz.
 
-Ao iniciar o desenvolvimento:
+Domínios previstos: dunaequipamentos.com.br e www.dunaequipamentos.com.br. DNS e HTTPS devem ser verificados no painel antes de afirmar disponibilidade.
 
-1. Crie a aplicação institucional nesta pasta, com configurações e dependências próprias.
-2. Mantenha as landing pages em `../meagderme/` e `../hipro/`.
-3. Defina conteúdo, contatos, domínio e hospedagem com a Duna.
-4. Se usar Sites, crie uma identidade própria; não reutilize os manifestos dos outros produtos.
-5. Atualize este README com os comandos de execução, variáveis, testes e publicação do institucional.
-
-Consulte o [guia do repositório para o Vicente](../README.md) para localizar os projetos existentes.
+As duas landing pages continuam independentes em `../meagderme/` e `../hipro/`. Esta home provisória apresenta os equipamentos e ainda não inclui formulário ou integração comercial.

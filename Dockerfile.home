@@ -1,0 +1,4 @@
+FROM nginx:alpine
+COPY duna/index.html /usr/share/nginx/html/index.html
+COPY duna/assets /usr/share/nginx/html/assets
+EXPOSE 80
